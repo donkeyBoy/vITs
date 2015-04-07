@@ -11,6 +11,7 @@ package javaapplication6;
  */
 public class JavaApplication6 {
 
+    private String namn;
     /**
      * @param args the command line arguments
      */
