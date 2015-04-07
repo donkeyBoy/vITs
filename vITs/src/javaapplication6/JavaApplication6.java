@@ -27,7 +27,7 @@ public class JavaApplication6 {
         
     }
     
-    public void ingamerandringartack() {
+    public void merandringartack() {
         
     }
     
