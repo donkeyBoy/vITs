@@ -31,8 +31,10 @@ public class JavaApplication6 {
         
     }
     
+
     public String jonte2() {
         return namn;
+        
     }
     
 }
