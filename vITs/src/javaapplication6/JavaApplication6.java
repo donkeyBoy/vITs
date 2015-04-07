@@ -31,7 +31,7 @@ public class JavaApplication6 {
         
     }
     
-    public void jonte() {
+    public void jonte2() {
         
     }
     
