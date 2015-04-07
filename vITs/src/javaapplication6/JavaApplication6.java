@@ -27,7 +27,7 @@ public class JavaApplication6 {
         
     }
     
-    public void merandringartack2() {
+    public void merandringartack3() {
         
     }
     
