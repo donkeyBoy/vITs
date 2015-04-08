@@ -37,6 +37,11 @@ public class hejFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         tfNamn.setText("jTextField1");
+        tfNamn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfNamnActionPerformed(evt);
+            }
+        });
 
         btnSetNamn.setText("jButton1");
         btnSetNamn.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -102,8 +107,12 @@ public class hejFrame extends javax.swing.JFrame {
 
     private void btnNyttNamnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNyttNamnMouseClicked
 
-        taNamn.append(namn);
+        taNamn.append(namn + "lol");
     }//GEN-LAST:event_btnNyttNamnMouseClicked
+
+    private void tfNamnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNamnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfNamnActionPerformed
 
     /**
      * @param args the command line arguments
