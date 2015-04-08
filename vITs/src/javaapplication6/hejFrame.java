@@ -30,8 +30,9 @@ public class hejFrame extends javax.swing.JFrame {
 
         tfNamn = new javax.swing.JTextField();
         btnSetNamn = new javax.swing.JButton();
-        lblNyttNamn = new javax.swing.JLabel();
         btnNyttNamn = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        taNamn = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,14 +45,16 @@ public class hejFrame extends javax.swing.JFrame {
             }
         });
 
-        lblNyttNamn.setText("jLabel1");
-
         btnNyttNamn.setText("jButton1");
         btnNyttNamn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnNyttNamnMouseClicked(evt);
             }
         });
+
+        taNamn.setColumns(20);
+        taNamn.setRows(5);
+        jScrollPane1.setViewportView(taNamn);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -63,9 +66,9 @@ public class hejFrame extends javax.swing.JFrame {
                         .addGap(83, 83, 83)
                         .addComponent(tfNamn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(95, 95, 95)
-                        .addComponent(lblNyttNamn)))
-                .addGap(73, 73, 73)
+                        .addGap(19, 19, 19)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnNyttNamn)
                     .addComponent(btnSetNamn))
@@ -78,23 +81,28 @@ public class hejFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tfNamn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSetNamn))
-                .addGap(80, 80, 80)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNyttNamn)
-                    .addComponent(btnNyttNamn))
-                .addContainerGap(117, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(btnNyttNamn)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(54, 54, 54))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSetNamnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSetNamnMouseClicked
-      String namn = tfNamn.getText();
+      String dittnamn = tfNamn.getText();
+      namn = dittnamn;
     }//GEN-LAST:event_btnSetNamnMouseClicked
 
     private void btnNyttNamnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNyttNamnMouseClicked
 
-        lblNyttNamn.setText(namn);
+        taNamn.append(namn);
     }//GEN-LAST:event_btnNyttNamnMouseClicked
 
     /**
@@ -135,7 +143,8 @@ public class hejFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnNyttNamn;
     private javax.swing.JButton btnSetNamn;
-    private javax.swing.JLabel lblNyttNamn;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea taNamn;
     private javax.swing.JTextField tfNamn;
     // End of variables declaration//GEN-END:variables
 }
