@@ -33,4 +33,8 @@ public class JavaApplication6 {
         
     }
     
+    public void andraNamn(String ettNamn) {
+        namn = ettNamn; 
+    }
+    
 }
