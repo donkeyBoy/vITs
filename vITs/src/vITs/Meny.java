@@ -16,6 +16,8 @@ public class Meny extends javax.swing.JFrame {
      */
     public Meny() {
         initComponents();
+        
+        this.setTitle("vITs Utbildning");
     }
 
     /**
@@ -29,12 +31,13 @@ public class Meny extends javax.swing.JFrame {
 
         tpMeny = new javax.swing.JTabbedPane();
         pStartsida = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        lblVitslogga = new javax.swing.JLabel();
+        pLogin = new javax.swing.JPanel();
+        lblLosen = new javax.swing.JLabel();
+        lblAnvnamn = new javax.swing.JLabel();
+        tfAnvnamn = new javax.swing.JTextField();
+        tfLosen = new javax.swing.JTextField();
+        btnLoggain = new javax.swing.JButton();
         pReseforskott = new javax.swing.JPanel();
         pReseutlägg = new javax.swing.JPanel();
         pRapporter = new javax.swing.JPanel();
@@ -47,45 +50,47 @@ public class Meny extends javax.swing.JFrame {
 
         pStartsida.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Matus\\Desktop\\logga.gif")); // NOI18N
+        lblVitslogga.setIcon(new javax.swing.ImageIcon("C:\\Users\\Matus\\Desktop\\logga.gif")); // NOI18N
 
-        jLabel1.setText("jLabel1");
+        pLogin.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel2.setText("jLabel2");
+        lblLosen.setText("Lösenord");
 
-        jTextField1.setText("jTextField1");
+        lblAnvnamn.setText("Användarnamn");
 
-        jTextField2.setText("jTextField2");
+        btnLoggain.setText("Logga in");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pLoginLayout = new javax.swing.GroupLayout(pLogin);
+        pLogin.setLayout(pLoginLayout);
+        pLoginLayout.setHorizontalGroup(
+            pLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pLoginLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(76, 76, 76))
+                .addGroup(pLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnLoggain, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pLoginLayout.createSequentialGroup()
+                        .addGroup(pLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblAnvnamn)
+                            .addComponent(lblLosen))
+                        .addGap(18, 18, 18)
+                        .addGroup(pLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tfAnvnamn, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+                            .addComponent(tfLosen)))))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(40, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23))
+        pLoginLayout.setVerticalGroup(
+            pLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pLoginLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(pLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblAnvnamn)
+                    .addComponent(tfAnvnamn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblLosen)
+                    .addComponent(tfLosen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnLoggain)
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pStartsidaLayout = new javax.swing.GroupLayout(pStartsida);
@@ -93,19 +98,21 @@ public class Meny extends javax.swing.JFrame {
         pStartsidaLayout.setHorizontalGroup(
             pStartsidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pStartsidaLayout.createSequentialGroup()
-                .addContainerGap(43, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(119, 119, 119))
+                .addContainerGap(135, Short.MAX_VALUE)
+                .addComponent(lblVitslogga)
+                .addGap(36, 36, 36)
+                .addComponent(pLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(87, 87, 87))
         );
         pStartsidaLayout.setVerticalGroup(
             pStartsidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pStartsidaLayout.createSequentialGroup()
                 .addGap(69, 69, 69)
                 .addGroup(pStartsidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pStartsidaLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(pLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblVitslogga))
                 .addContainerGap(85, Short.MAX_VALUE))
         );
 
@@ -117,11 +124,11 @@ public class Meny extends javax.swing.JFrame {
         pReseforskott.setLayout(pReseforskottLayout);
         pReseforskottLayout.setHorizontalGroup(
             pReseforskottLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 796, Short.MAX_VALUE)
+            .addGap(0, 801, Short.MAX_VALUE)
         );
         pReseforskottLayout.setVerticalGroup(
             pReseforskottLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 475, Short.MAX_VALUE)
+            .addGap(0, 503, Short.MAX_VALUE)
         );
 
         tpMeny.addTab("Reseförskott", pReseforskott);
@@ -221,17 +228,18 @@ public class Meny extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JButton btnLoggain;
+    private javax.swing.JLabel lblAnvnamn;
+    private javax.swing.JLabel lblLosen;
+    private javax.swing.JLabel lblVitslogga;
     private javax.swing.JPanel pAdmin;
+    private javax.swing.JPanel pLogin;
     private javax.swing.JPanel pRapporter;
     private javax.swing.JPanel pReseforskott;
     private javax.swing.JPanel pReseutlägg;
     private javax.swing.JPanel pStartsida;
+    private javax.swing.JTextField tfAnvnamn;
+    private javax.swing.JTextField tfLosen;
     private javax.swing.JTabbedPane tpMeny;
     // End of variables declaration//GEN-END:variables
 }
