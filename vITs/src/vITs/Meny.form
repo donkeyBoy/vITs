@@ -91,7 +91,7 @@
             <Component class="javax.swing.JLabel" name="lblVitslogga">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Matus\Desktop\logga.gif"/>
+                  <Image iconType="3" name="/vITs/logga.gif"/>
                 </Property>
               </Properties>
             </Component>

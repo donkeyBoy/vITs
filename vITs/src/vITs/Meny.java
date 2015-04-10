@@ -50,7 +50,7 @@ public class Meny extends javax.swing.JFrame {
 
         pStartsida.setBackground(new java.awt.Color(255, 255, 255));
 
-        lblVitslogga.setIcon(new javax.swing.ImageIcon("C:\\Users\\Matus\\Desktop\\logga.gif")); // NOI18N
+        lblVitslogga.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vITs/logga.gif"))); // NOI18N
 
         pLogin.setBackground(new java.awt.Color(255, 255, 255));
 
