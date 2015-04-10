@@ -29,25 +29,72 @@ public class Meny extends javax.swing.JFrame {
 
         tpMeny = new javax.swing.JTabbedPane();
         pStartsida = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         pReseforskott = new javax.swing.JPanel();
         pReseutlägg = new javax.swing.JPanel();
         pRapporter = new javax.swing.JPanel();
         pAdmin = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+
+        tpMeny.setBackground(new java.awt.Color(255, 255, 255));
+
+        pStartsida.setBackground(new java.awt.Color(255, 255, 255));
+
+        jTextField1.setText("jTextField1");
+
+        jTextField2.setText("jTextField2");
+
+        jLabel1.setText("jLabel1");
+
+        jLabel2.setText("jLabel2");
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Matus\\Desktop\\logga.gif")); // NOI18N
 
         javax.swing.GroupLayout pStartsidaLayout = new javax.swing.GroupLayout(pStartsida);
         pStartsida.setLayout(pStartsidaLayout);
         pStartsidaLayout.setHorizontalGroup(
             pStartsidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 795, Short.MAX_VALUE)
+            .addGroup(pStartsidaLayout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(jLabel3)
+                .addGap(72, 72, 72)
+                .addGroup(pStartsidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
+                .addGroup(pStartsidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(149, 149, 149))
         );
         pStartsidaLayout.setVerticalGroup(
             pStartsidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 372, Short.MAX_VALUE)
+            .addGroup(pStartsidaLayout.createSequentialGroup()
+                .addGroup(pStartsidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pStartsidaLayout.createSequentialGroup()
+                        .addGap(187, 187, 187)
+                        .addGroup(pStartsidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1))
+                        .addGap(72, 72, 72)
+                        .addGroup(pStartsidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2)))
+                    .addGroup(pStartsidaLayout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addComponent(jLabel3)))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
 
         tpMeny.addTab("Startsida", pStartsida);
+
+        pReseforskott.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout pReseforskottLayout = new javax.swing.GroupLayout(pReseforskott);
         pReseforskott.setLayout(pReseforskottLayout);
@@ -57,10 +104,12 @@ public class Meny extends javax.swing.JFrame {
         );
         pReseforskottLayout.setVerticalGroup(
             pReseforskottLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 372, Short.MAX_VALUE)
+            .addGap(0, 475, Short.MAX_VALUE)
         );
 
         tpMeny.addTab("Reseförskott", pReseforskott);
+
+        pReseutlägg.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout pReseutläggLayout = new javax.swing.GroupLayout(pReseutlägg);
         pReseutlägg.setLayout(pReseutläggLayout);
@@ -70,10 +119,12 @@ public class Meny extends javax.swing.JFrame {
         );
         pReseutläggLayout.setVerticalGroup(
             pReseutläggLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 372, Short.MAX_VALUE)
+            .addGap(0, 475, Short.MAX_VALUE)
         );
 
         tpMeny.addTab("Reseutlägg", pReseutlägg);
+
+        pRapporter.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout pRapporterLayout = new javax.swing.GroupLayout(pRapporter);
         pRapporter.setLayout(pRapporterLayout);
@@ -83,10 +134,12 @@ public class Meny extends javax.swing.JFrame {
         );
         pRapporterLayout.setVerticalGroup(
             pRapporterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 372, Short.MAX_VALUE)
+            .addGap(0, 475, Short.MAX_VALUE)
         );
 
         tpMeny.addTab("Rapporter", pRapporter);
+
+        pAdmin.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout pAdminLayout = new javax.swing.GroupLayout(pAdmin);
         pAdmin.setLayout(pAdminLayout);
@@ -96,7 +149,7 @@ public class Meny extends javax.swing.JFrame {
         );
         pAdminLayout.setVerticalGroup(
             pAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 372, Short.MAX_VALUE)
+            .addGap(0, 475, Short.MAX_VALUE)
         );
 
         tpMeny.addTab("Admin", pAdmin);
@@ -151,6 +204,11 @@ public class Meny extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JPanel pAdmin;
     private javax.swing.JPanel pRapporter;
     private javax.swing.JPanel pReseforskott;
