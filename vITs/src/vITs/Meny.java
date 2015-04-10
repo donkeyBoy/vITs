@@ -27,89 +27,17 @@ public class Meny extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        tpMeny = new javax.swing.JTabbedPane();
-        pStartsida = new javax.swing.JPanel();
-        pReseforskott = new javax.swing.JPanel();
-        pReseutlägg = new javax.swing.JPanel();
-        pRapporter = new javax.swing.JPanel();
-        pAdmin = new javax.swing.JPanel();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        javax.swing.GroupLayout pStartsidaLayout = new javax.swing.GroupLayout(pStartsida);
-        pStartsida.setLayout(pStartsidaLayout);
-        pStartsidaLayout.setHorizontalGroup(
-            pStartsidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 795, Short.MAX_VALUE)
-        );
-        pStartsidaLayout.setVerticalGroup(
-            pStartsidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 372, Short.MAX_VALUE)
-        );
-
-        tpMeny.addTab("Startsida", pStartsida);
-
-        javax.swing.GroupLayout pReseforskottLayout = new javax.swing.GroupLayout(pReseforskott);
-        pReseforskott.setLayout(pReseforskottLayout);
-        pReseforskottLayout.setHorizontalGroup(
-            pReseforskottLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 795, Short.MAX_VALUE)
-        );
-        pReseforskottLayout.setVerticalGroup(
-            pReseforskottLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 372, Short.MAX_VALUE)
-        );
-
-        tpMeny.addTab("Reseförskott", pReseforskott);
-
-        javax.swing.GroupLayout pReseutläggLayout = new javax.swing.GroupLayout(pReseutlägg);
-        pReseutlägg.setLayout(pReseutläggLayout);
-        pReseutläggLayout.setHorizontalGroup(
-            pReseutläggLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 795, Short.MAX_VALUE)
-        );
-        pReseutläggLayout.setVerticalGroup(
-            pReseutläggLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 372, Short.MAX_VALUE)
-        );
-
-        tpMeny.addTab("Reseutlägg", pReseutlägg);
-
-        javax.swing.GroupLayout pRapporterLayout = new javax.swing.GroupLayout(pRapporter);
-        pRapporter.setLayout(pRapporterLayout);
-        pRapporterLayout.setHorizontalGroup(
-            pRapporterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 795, Short.MAX_VALUE)
-        );
-        pRapporterLayout.setVerticalGroup(
-            pRapporterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 372, Short.MAX_VALUE)
-        );
-
-        tpMeny.addTab("Rapporter", pRapporter);
-
-        javax.swing.GroupLayout pAdminLayout = new javax.swing.GroupLayout(pAdmin);
-        pAdmin.setLayout(pAdminLayout);
-        pAdminLayout.setHorizontalGroup(
-            pAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 795, Short.MAX_VALUE)
-        );
-        pAdminLayout.setVerticalGroup(
-            pAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 372, Short.MAX_VALUE)
-        );
-
-        tpMeny.addTab("Admin", pAdmin);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tpMeny, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tpMeny)
+            .addGap(0, 300, Short.MAX_VALUE)
         );
 
         pack();
@@ -151,11 +79,5 @@ public class Meny extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel pAdmin;
-    private javax.swing.JPanel pRapporter;
-    private javax.swing.JPanel pReseforskott;
-    private javax.swing.JPanel pReseutlägg;
-    private javax.swing.JPanel pStartsida;
-    private javax.swing.JTabbedPane tpMeny;
     // End of variables declaration//GEN-END:variables
 }
