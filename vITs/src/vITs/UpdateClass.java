@@ -20,9 +20,9 @@ public class UpdateClass {
                 
                 Statement myStmt = connection.createStatement();
                 
-                String sql = "Insert into Reseforskott values ('" + rf.getText() + "','" + rf.getSumma() + "';'" + rf.getValuta() + "')";
+               // String sql = "Insert into Reseforskott values ('" + rf.getText() + "','" + rf.getSumma() + "';'" + rf.getValuta() + "')";
                 
-                myStmt.executeUpdate(sql);
+                //myStmt.executeUpdate(sql);
         } catch (SQLException se) {
             se.printStackTrace();
         } 
@@ -34,7 +34,7 @@ public class UpdateClass {
                 
                 Statement myStmt = connection.createStatement();
                 //public Reseförskott(int id, String motivering, int summa, boolean accepterat)
-                String sql = "Insert into Reseförskott values (" + rf.getId() + ", '" + rf.getMotivering() + "'," + rf.getSumma() + ", " + rf.getKonsultID() + ", 2, null, " + rf.getAccepterat() + ")";
+                String sql = "Insert into Reseförskott(Motivering, Summa, KonsultID, ChefID, ReseutläggsID, Accepterat) values (" + rf.getId() + ", '" + rf.getMotivering() + "'," + rf.getSumma() + ", " + rf.getKonsultID() + ", 2, null, " + rf.getAccepterat() + ")";
                 
                 myStmt.executeUpdate(sql);
         } catch (SQLException se) {
