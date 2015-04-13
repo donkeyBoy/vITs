@@ -30,8 +30,9 @@ public class UpdateClass {
     
     public static void insertReseforskott(EntityGrej.Reseförskott rf) {
         try {
-                Connection connection = DriverManager.getConnection("jdbc:mysql://resadb.cnjxqasdqhys.us-west-2.rds.amazonaws.com:3306/resaDB", "resaDB", "resaDB1234");
-                
+                //Connection connection = DriverManager.getConnection("jdbc:mysql://resadb.cnjxqasdqhys.us-west-2.rds.amazonaws.com:3306/resaDB", "resaDB", "resaDB1234");
+            Connection connection = DatabasTest.newConnection();
+            
                 Statement myStmt = connection.createStatement();
                 //public Reseförskott(int id, String motivering, int summa, boolean accepterat)
                 String sql = "Insert into Reseförskott(Motivering, Summa, KonsultID, ReseutläggsID, Accepterat) values ('" + rf.getMotivering() + "'," + rf.getSumma() + ", " + rf.getKonsultID() + ", null, " + rf.getAccepterat() + ")";
