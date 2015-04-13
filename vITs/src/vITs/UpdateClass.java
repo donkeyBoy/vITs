@@ -19,7 +19,7 @@ public class UpdateClass {
                 
                 Statement myStmt = connection.createStatement();
                 
-                String sql = "Insert into Lander values ('Luxemburger')";
+                String sql = "Delete from Lander where Land = 'Luxemburg'";
                 
                 myStmt.executeUpdate(sql);
         } catch (SQLException se) {
