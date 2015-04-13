@@ -5,18 +5,24 @@
  */
 package vITs;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Matus
  */
 public class Meny extends javax.swing.JFrame {
 
+    private String id;
+    private String anvnamn; 
     private Reseforskott reseforskott;
+    private boolean chef;
     /**
      * Creates new form Meny
      */
     public Meny() {
         initComponents();
+        this.btnLoggaUt.setVisible(false);
         
         this.setTitle("vITs Utbildning");
     }
@@ -37,8 +43,10 @@ public class Meny extends javax.swing.JFrame {
         lblLosen = new javax.swing.JLabel();
         lblAnvnamn = new javax.swing.JLabel();
         tfAnvnamn = new javax.swing.JTextField();
-        tfLosen = new javax.swing.JTextField();
         btnLoggain = new javax.swing.JButton();
+        tfLosen = new javax.swing.JPasswordField();
+        lblWelcome = new javax.swing.JLabel();
+        btnLoggaUt = new javax.swing.JButton();
         pReseforskott = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -113,6 +121,16 @@ public class Meny extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
 
         tpMeny.setBackground(new java.awt.Color(255, 255, 255));
+        tpMeny.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                tpMenyStateChanged(evt);
+            }
+        });
+        tpMeny.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tpMenyMouseClicked(evt);
+            }
+        });
 
         pStartsida.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -125,6 +143,17 @@ public class Meny extends javax.swing.JFrame {
         lblAnvnamn.setText("Användarnamn");
 
         btnLoggain.setText("Logga in");
+        btnLoggain.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoggainActionPerformed(evt);
+            }
+        });
+
+        tfLosen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfLosenActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pLoginLayout = new javax.swing.GroupLayout(pLogin);
         pLogin.setLayout(pLoginLayout);
@@ -132,16 +161,17 @@ public class Meny extends javax.swing.JFrame {
             pLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pLoginLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnLoggain, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pLoginLayout.createSequentialGroup()
+                .addGroup(pLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pLoginLayout.createSequentialGroup()
                         .addGroup(pLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblAnvnamn)
                             .addComponent(lblLosen))
                         .addGap(18, 18, 18)
                         .addGroup(pLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(tfAnvnamn, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
-                            .addComponent(tfLosen)))))
+                            .addComponent(tfLosen)))
+                    .addComponent(btnLoggain))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         pLoginLayout.setVerticalGroup(
             pLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,8 +186,18 @@ public class Meny extends javax.swing.JFrame {
                     .addComponent(tfLosen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnLoggain)
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
+
+        lblWelcome.setFont(new java.awt.Font("Castellar", 0, 36)); // NOI18N
+
+        btnLoggaUt.setText("Logga ut");
+        btnLoggaUt.setAutoscrolls(true);
+        btnLoggaUt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoggaUtActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pStartsidaLayout = new javax.swing.GroupLayout(pStartsida);
         pStartsida.setLayout(pStartsidaLayout);
@@ -165,10 +205,18 @@ public class Meny extends javax.swing.JFrame {
             pStartsidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pStartsidaLayout.createSequentialGroup()
                 .addGap(171, 171, 171)
-                .addComponent(lblVitslogga)
-                .addGap(152, 152, 152)
-                .addComponent(pLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(277, Short.MAX_VALUE))
+                .addGroup(pStartsidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnLoggaUt, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pStartsidaLayout.createSequentialGroup()
+                        .addComponent(lblVitslogga)
+                        .addGroup(pStartsidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pStartsidaLayout.createSequentialGroup()
+                                .addGap(349, 349, 349)
+                                .addComponent(pLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pStartsidaLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(lblWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 612, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         pStartsidaLayout.setVerticalGroup(
             pStartsidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -178,8 +226,12 @@ public class Meny extends javax.swing.JFrame {
                         .addGap(77, 77, 77)
                         .addComponent(lblVitslogga))
                     .addGroup(pStartsidaLayout.createSequentialGroup()
-                        .addGap(157, 157, 157)
-                        .addComponent(pLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap()
+                        .addComponent(btnLoggaUt, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(111, 111, 111)
+                        .addComponent(pLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(376, Short.MAX_VALUE))
         );
 
@@ -209,6 +261,11 @@ public class Meny extends javax.swing.JFrame {
                 btnSkickaMouseClicked(evt);
             }
         });
+        btnSkicka.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSkickaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -230,7 +287,7 @@ public class Meny extends javax.swing.JFrame {
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(cbValuta, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 573, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 603, Short.MAX_VALUE)
                                 .addComponent(btnSkicka, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(108, 108, 108)
@@ -370,7 +427,7 @@ public class Meny extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jTextField5)
                             .addComponent(jComboBox4, 0, 79, Short.MAX_VALUE))))
-                .addContainerGap(307, Short.MAX_VALUE))
+                .addContainerGap(337, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(150, 150, 150)
                 .addComponent(jBtbRegReseförskott)
@@ -615,7 +672,7 @@ public class Meny extends javax.swing.JFrame {
                         .addComponent(jRadioButton1)
                         .addGap(18, 18, 18)
                         .addComponent(jRadioButton2)))
-                .addContainerGap(160, Short.MAX_VALUE))
+                .addContainerGap(212, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -706,13 +763,70 @@ public class Meny extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox5ActionPerformed
 
     private void btnSkickaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSkickaMouseClicked
-        
-        EntityGrej.Reseförskott rf = new EntityGrej.Reseförskott(0, taMotivering.getText(), Integer.parseInt(tfSumma.getText()), false );
+        if(this.id == null){
+            JOptionPane.showMessageDialog(null, "Var god logga innan du skickar in ditt ärende!");
+            return;
+        }
+        EntityGrej.Reseförskott rf = new EntityGrej.Reseförskott(0, taMotivering.getText(), Integer.parseInt(tfSumma.getText()), false, Integer.parseInt(id));
         
         
         //Reseforskott rf = new Reseforskott(taMotivering.getText(), Integer.parseInt(tfSumma.getText()), cbValuta.getSelectedItem().toString() );
         UpdateClass.insertReseforskott(rf);
+        JOptionPane.showMessageDialog(null, "Ärende skickat!");
+        taMotivering.setText("");
+        tfSumma.setText("");
     }//GEN-LAST:event_btnSkickaMouseClicked
+
+    private void tfLosenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfLosenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfLosenActionPerformed
+
+    private void btnLoggainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoggainActionPerformed
+        Inlogg loggin = new Inlogg();
+        String id = loggin.login(tfAnvnamn.getText(), tfLosen.getText());
+        if(id != null){
+            this.chef = loggin.chef(id);
+            JOptionPane.showMessageDialog(null, "Inloggning Lyckades!");
+            this.anvnamn = tfAnvnamn.getText();
+            this.id = id;
+            lblWelcome.setText("Välkommen, " + tfAnvnamn.getText() + "!");      
+            tfAnvnamn.setVisible(false);
+            tfLosen.setVisible(false);
+            lblAnvnamn.setVisible(false);
+            lblLosen.setVisible(false);
+            btnLoggain.setVisible(false);
+            btnLoggaUt.setVisible(true);
+        }
+        else
+            JOptionPane.showMessageDialog(null, "Fel lösenord och/eller användarman!");
+    }//GEN-LAST:event_btnLoggainActionPerformed
+
+    private void btnSkickaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSkickaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSkickaActionPerformed
+
+    private void tpMenyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tpMenyMouseClicked
+       
+    }//GEN-LAST:event_tpMenyMouseClicked
+
+    private void tpMenyStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_tpMenyStateChanged
+        if(tpMeny.getSelectedIndex() == 4 && chef == false){
+            tpMeny.setSelectedIndex(0);
+            JOptionPane.showMessageDialog(null, "Du saknar behörighet för den här fliken!");
+        }
+    }//GEN-LAST:event_tpMenyStateChanged
+
+    private void btnLoggaUtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoggaUtActionPerformed
+        this.id=null;
+        this.chef=false;
+        this.anvnamn = null;
+        lblLosen.setVisible(true);
+        lblAnvnamn.setVisible(true);
+        tfLosen.setVisible(true);
+        tfAnvnamn.setVisible(true);
+        btnLoggain.setVisible(true);
+        btnLoggaUt.setVisible(false);
+    }//GEN-LAST:event_btnLoggaUtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -750,6 +864,7 @@ public class Meny extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnLoggaUt;
     private javax.swing.JButton btnLoggain;
     private javax.swing.JButton btnSkicka;
     private javax.swing.JComboBox cbValuta;
@@ -759,7 +874,6 @@ public class Meny extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JComboBox jComboBox2;
     private javax.swing.JComboBox jComboBox3;
     private javax.swing.JComboBox jComboBox4;
@@ -804,8 +918,6 @@ public class Meny extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField16;
@@ -820,6 +932,7 @@ public class Meny extends javax.swing.JFrame {
     private javax.swing.JLabel lblAnvnamn;
     private javax.swing.JLabel lblLosen;
     private javax.swing.JLabel lblVitslogga;
+    private javax.swing.JLabel lblWelcome;
     private javax.swing.JPanel pAdmin;
     private javax.swing.JPanel pLogin;
     private javax.swing.JPanel pRapporter;
@@ -828,7 +941,7 @@ public class Meny extends javax.swing.JFrame {
     private javax.swing.JPanel pStartsida;
     private javax.swing.JTextArea taMotivering;
     private javax.swing.JTextField tfAnvnamn;
-    private javax.swing.JTextField tfLosen;
+    private javax.swing.JPasswordField tfLosen;
     private javax.swing.JTextField tfSumma;
     private javax.swing.JTabbedPane tpMeny;
     // End of variables declaration//GEN-END:variables
