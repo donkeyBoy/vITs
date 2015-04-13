@@ -19,14 +19,12 @@ public class UpdateClass {
                 
                 Statement myStmt = connection.createStatement();
                 
-                String sql = "Insert into Lander values ('Zimbabwe')";
+                String sql = "Insert into Lander values ('Luxemburger')";
                 
                 myStmt.executeUpdate(sql);
         } catch (SQLException se) {
             se.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        } 
     }
     
 }
