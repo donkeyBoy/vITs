@@ -6,6 +6,7 @@
 package vITs;
 
 import java.sql.*;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -27,17 +28,17 @@ public class UpdateClass {
         } 
     }
     
-    public static void insertReseforskott(Reseforskott rf) {
+    public static void insertReseforskott(EntityGrej.Reseförskott rf) {
         try {
                 Connection connection = DriverManager.getConnection("jdbc:mysql://resadb.cnjxqasdqhys.us-west-2.rds.amazonaws.com:3306/resaDB", "resaDB", "resaDB1234");
                 
                 Statement myStmt = connection.createStatement();
-                
-                String sql = "Insert into Reseforskott values ('" + rf.getText() + "'," + rf.getSumma() + ";'" + rf.getValuta() + "')";
+                //public Reseförskott(int id, String motivering, int summa, boolean accepterat)
+                String sql = "Insert into Reseförskott values (" + rf.getId() + ", '" + rf.getMotivering() + "'," + rf.getSumma() + ", " + rf.getKonsultID() + ", 2, null, " + rf.getAccepterat() + ")";
                 
                 myStmt.executeUpdate(sql);
         } catch (SQLException se) {
-            se.printStackTrace();
+            JOptionPane.showMessageDialog(null, se);
         }
     }
 }

@@ -50,7 +50,7 @@ public class Reseförskott implements Serializable {
     private Reseutlägg reseutläggsID;
     @JoinColumn(name = "KonsultID", referencedColumnName = "ID")
     @ManyToOne(optional = false)
-    private Konsulter konsultID;
+    private int konsultID;
 
     public Reseförskott() {
     }
@@ -59,11 +59,14 @@ public class Reseförskott implements Serializable {
         this.id = id;
     }
 
-    public Reseförskott(Integer id, String motivering, int summa, boolean accepterat) {
+    public Reseförskott(int id, String motivering, int summa, boolean accepterat) {
         this.id = id;
         this.motivering = motivering;
         this.summa = summa;
         this.accepterat = accepterat;
+        this.reseutläggsID = null;
+        this.konsultID = 1;
+        
     }
 
     public Integer getId() {
@@ -106,11 +109,11 @@ public class Reseförskott implements Serializable {
         this.reseutläggsID = reseutläggsID;
     }
 
-    public Konsulter getKonsultID() {
+    public int getKonsultID() {
         return konsultID;
     }
 
-    public void setKonsultID(Konsulter konsultID) {
+    public void setKonsultID(int konsultID) {
         this.konsultID = konsultID;
     }
 
