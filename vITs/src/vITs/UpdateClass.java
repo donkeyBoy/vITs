@@ -6,6 +6,7 @@
 package vITs;
 
 import java.sql.*;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -19,12 +20,25 @@ public class UpdateClass {
                 
                 Statement myStmt = connection.createStatement();
                 
-                String sql = "Delete from Lander where Land = 'Luxemburg'";
+               // String sql = "Insert into Reseforskott values ('" + rf.getText() + "','" + rf.getSumma() + "';'" + rf.getValuta() + "')";
                 
-                myStmt.executeUpdate(sql);
+                //myStmt.executeUpdate(sql);
         } catch (SQLException se) {
             se.printStackTrace();
         } 
     }
     
+    public static void insertReseforskott(EntityGrej.Reseförskott rf) {
+        try {
+                Connection connection = DriverManager.getConnection("jdbc:mysql://resadb.cnjxqasdqhys.us-west-2.rds.amazonaws.com:3306/resaDB", "resaDB", "resaDB1234");
+                
+                Statement myStmt = connection.createStatement();
+                //public Reseförskott(int id, String motivering, int summa, boolean accepterat)
+                String sql = "Insert into Reseförskott(Motivering, Summa, KonsultID, ReseutläggsID, Accepterat) values ('" + rf.getMotivering() + "'," + rf.getSumma() + ", " + rf.getKonsultID() + ", null, " + rf.getAccepterat() + ")";
+                
+                myStmt.executeUpdate(sql);
+        } catch (SQLException se) {
+            JOptionPane.showMessageDialog(null, se);
+        }
+    }
 }
