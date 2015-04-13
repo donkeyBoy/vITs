@@ -19,7 +19,7 @@ public class UpdateClass {
                 
                 Statement myStmt = connection.createStatement();
                 
-                String sql = "Delete from Lander where Land = 'Luxemburg'";
+                String sql = "Insert into Reseforskott values ('" + rf.getText() + "','" + rf.getSumma() + "';'" + rf.getValuta() + "')";
                 
                 myStmt.executeUpdate(sql);
         } catch (SQLException se) {
@@ -27,4 +27,17 @@ public class UpdateClass {
         } 
     }
     
+    public static void insertReseforskott(Reseforskott rf) {
+        try {
+                Connection connection = DriverManager.getConnection("jdbc:mysql://resadb.cnjxqasdqhys.us-west-2.rds.amazonaws.com:3306/resaDB", "resaDB", "resaDB1234");
+                
+                Statement myStmt = connection.createStatement();
+                
+                String sql = "Insert into Reseforskott values ('" + rf.getText() + "'," + rf.getSumma() + ";'" + rf.getValuta() + "')";
+                
+                myStmt.executeUpdate(sql);
+        } catch (SQLException se) {
+            se.printStackTrace();
+        }
+    }
 }
