@@ -6,6 +6,7 @@
 package vITs;
 
 import java.sql.*;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -30,5 +31,17 @@ public class DatabasTest {
             return;
         } 
     }
+    
+    public static Connection newConnection() {
+        try {
+        Connection connection = DriverManager.getConnection("jdbc:mysql://resadb.cnjxqasdqhys.us-west-2.rds.amazonaws.com:3306/resaDB", "resaDB", "resaDB1234");
+        return connection;
+        } catch (SQLException e) {
+            System.out.print(e);
+            JOptionPane.showMessageDialog(null, "Misslyckades att koppla upp till databasen");
+            return null;
+        } 
+    }
+    
     
 }
