@@ -452,7 +452,11 @@ public class Meny extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox5ActionPerformed
 
     private void btnSkickaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSkickaMouseClicked
-        Reseforskott rf = new Reseforskott(taMotivering.getText(), Integer.parseInt(tfSumma.getText()), cbValuta.getSelectedItem().toString() );
+        
+        EntityGrej.Reseförskott rf = new EntityGrej.Reseförskott(0, taMotivering.getText(), Integer.parseInt(tfSumma.getText()), false );
+        
+        
+        //Reseforskott rf = new Reseforskott(taMotivering.getText(), Integer.parseInt(tfSumma.getText()), cbValuta.getSelectedItem().toString() );
         UpdateClass.insertReseforskott(rf);
     }//GEN-LAST:event_btnSkickaMouseClicked
 
