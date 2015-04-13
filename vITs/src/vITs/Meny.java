@@ -772,7 +772,6 @@ public class Meny extends javax.swing.JFrame {
         
         //Reseforskott rf = new Reseforskott(taMotivering.getText(), Integer.parseInt(tfSumma.getText()), cbValuta.getSelectedItem().toString() );
         UpdateClass.insertReseforskott(rf);
-        JOptionPane.showMessageDialog(null, "Ärende skickat!");
         taMotivering.setText("");
         tfSumma.setText("");
     }//GEN-LAST:event_btnSkickaMouseClicked
