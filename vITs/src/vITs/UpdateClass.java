@@ -35,9 +35,10 @@ public class UpdateClass {
             
                 Statement myStmt = connection.createStatement();
                 //public Reseförskott(int id, String motivering, int summa, boolean accepterat)
-                String sql = "Insert into Reseförskott(Motivering, Summa, KonsultID, ReseutläggsID, Accepterat) values ('" + rf.getMotivering() + "'," + rf.getSumma() + ", " + rf.getKonsultID() + ", null, " + rf.getAccepterat() + ")";
+                String sql = "Insert into Reseförskott(Motivering, Summa, KonsultID, ReseutläggsID, Accepterat) values ('" + rf.getMotivering() + "'," + rf.getSumma() + ", " + rf.getKonsultID() + ", null, null)";
                 
                 myStmt.executeUpdate(sql);
+            JOptionPane.showMessageDialog(null, "Ärende skickat!");
         } catch (SQLException se) {
             JOptionPane.showMessageDialog(null, se);
         }
