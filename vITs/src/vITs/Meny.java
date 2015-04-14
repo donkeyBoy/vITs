@@ -798,7 +798,7 @@ public class Meny extends javax.swing.JFrame {
     }//GEN-LAST:event_cbKostnadTypItemStateChanged
 
     private void btnSparaSomUtkastMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSparaSomUtkastMouseClicked
-       EntityGrej.Reseutlägg reseutlägg = new EntityGrej.Reseutlägg();
+       EntityGrej.Reseutlägg reseutlägg = new EntityGrej.Reseutlägg(0, );
        reseutlägg.sparaIUtkast();
     }//GEN-LAST:event_btnSparaSomUtkastMouseClicked
 
