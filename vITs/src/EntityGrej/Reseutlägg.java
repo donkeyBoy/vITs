@@ -75,14 +75,14 @@ public class Reseutlägg implements Serializable {
         this.accepterat = accepterat;
     }
     
-     public void sparaIUtkast(EntityGrej.Reseutlägg ru)
+    public void sparaIUtkast()
     {   
         try
         {
             File file = new File("Hejhej.txt");
             PrintWriter out = new PrintWriter(file);
             
-            String reseutlägg = ""
+            //String reseutlägg = ""
             
             out.write("dsads");
             out.close();
@@ -174,6 +174,8 @@ public class Reseutlägg implements Serializable {
     public String toString() {
         return "EntityGrej.Reseutl\u00e4gg[ id=" + id + " ]";
     }
+
+   
     
    
         
