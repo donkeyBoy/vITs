@@ -763,17 +763,7 @@ public class Meny extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox5ActionPerformed
 
     private void btnSkickaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSkickaMouseClicked
-        if(this.id == null){
-            JOptionPane.showMessageDialog(null, "Var god logga innan du skickar in ditt ärende!");
-            return;
-        }
-        EntityGrej.Reseförskott rf = new EntityGrej.Reseförskott(0, taMotivering.getText(), Integer.parseInt(tfSumma.getText()), false, Integer.parseInt(id));
         
-        
-        //Reseforskott rf = new Reseforskott(taMotivering.getText(), Integer.parseInt(tfSumma.getText()), cbValuta.getSelectedItem().toString() );
-        UpdateClass.insertReseforskott(rf);
-        taMotivering.setText("");
-        tfSumma.setText("");
     }//GEN-LAST:event_btnSkickaMouseClicked
 
     private void tfLosenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfLosenActionPerformed
@@ -801,7 +791,17 @@ public class Meny extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLoggainActionPerformed
 
     private void btnSkickaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSkickaActionPerformed
-        // TODO add your handling code here:
+        if(this.id == null){
+            JOptionPane.showMessageDialog(null, "Var god logga innan du skickar in ditt ärende!");
+            return;
+        }
+        EntityGrej.Reseförskott rf = new EntityGrej.Reseförskott(0, taMotivering.getText(), Integer.parseInt(tfSumma.getText()), false, Integer.parseInt(id));
+        
+        
+        //Reseforskott rf = new Reseforskott(taMotivering.getText(), Integer.parseInt(tfSumma.getText()), cbValuta.getSelectedItem().toString() );
+        UpdateClass.insertReseforskott(rf);
+        taMotivering.setText("");
+        tfSumma.setText("");
     }//GEN-LAST:event_btnSkickaActionPerformed
 
     private void tpMenyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tpMenyMouseClicked
