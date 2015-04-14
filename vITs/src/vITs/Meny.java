@@ -15,7 +15,6 @@ public class Meny extends javax.swing.JFrame {
 
     private String id;
     private String anvnamn; 
-    private Reseforskott reseforskott;
     private boolean chef;
     /**
      * Creates new form Meny
