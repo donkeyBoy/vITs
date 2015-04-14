@@ -92,27 +92,10 @@ public class Meny extends javax.swing.JFrame {
         jComboBox9 = new javax.swing.JComboBox();
         jToggleButton1 = new javax.swing.JToggleButton();
         pAdmin = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel18 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jTextField14 = new javax.swing.JTextField();
-        jTextField15 = new javax.swing.JTextField();
-        jTextField16 = new javax.swing.JTextField();
-        jTextField17 = new javax.swing.JTextField();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jTextField18 = new javax.swing.JTextField();
-        jTextField19 = new javax.swing.JTextField();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -618,75 +601,44 @@ public class Meny extends javax.swing.JFrame {
 
         pAdmin.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel4.setLayout(null);
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1148, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 678, Short.MAX_VALUE)
+        );
 
-        jLabel18.setText("Namn");
-        jPanel4.add(jLabel18);
-        jLabel18.setBounds(83, 101, 27, 14);
+        jTabbedPane1.addTab("Hantera användare", jPanel5);
 
-        jButton4.setText("Ändra");
-        jPanel4.add(jButton4);
-        jButton4.setBounds(772, 316, 61, 23);
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1148, Short.MAX_VALUE)
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 678, Short.MAX_VALUE)
+        );
 
-        jButton5.setText("Ta bort");
-        jPanel4.add(jButton5);
-        jButton5.setBounds(874, 316, 67, 23);
+        jTabbedPane1.addTab("Valuta", jPanel6);
 
-        jButton6.setText("Lägg till");
-        jPanel4.add(jButton6);
-        jButton6.setBounds(630, 316, 69, 23);
-        jPanel4.add(jTextField14);
-        jTextField14.setBounds(189, 98, 265, 20);
-        jPanel4.add(jTextField15);
-        jTextField15.setBounds(189, 197, 265, 20);
-        jPanel4.add(jTextField16);
-        jTextField16.setBounds(189, 621, 265, 20);
-        jPanel4.add(jTextField17);
-        jTextField17.setBounds(189, 705, 265, 20);
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1148, Short.MAX_VALUE)
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 678, Short.MAX_VALUE)
+        );
 
-        jLabel19.setText("Telefon");
-        jPanel4.add(jLabel19);
-        jLabel19.setBounds(74, 200, 36, 14);
-
-        jLabel20.setText("Mail");
-        jPanel4.add(jLabel20);
-        jLabel20.setBounds(77, 606, 33, 14);
-
-        jLabel21.setText("Adress");
-        jPanel4.add(jLabel21);
-        jLabel21.setBounds(77, 708, 33, 14);
-
-        jLabel22.setText("Användarnamn");
-        jPanel4.add(jLabel22);
-        jLabel22.setBounds(540, 101, 73, 14);
-
-        jLabel23.setText("Löseneord");
-        jPanel4.add(jLabel23);
-        jLabel23.setBounds(540, 188, 73, 14);
-        jPanel4.add(jTextField18);
-        jTextField18.setBounds(690, 98, 251, 20);
-        jPanel4.add(jTextField19);
-        jTextField19.setBounds(690, 185, 251, 20);
-
-        jLabel24.setText("Kön");
-        jPanel4.add(jLabel24);
-        jLabel24.setBounds(77, 477, 33, 14);
-
-        jLabel25.setText("Man");
-        jPanel4.add(jLabel25);
-        jLabel25.setBounds(189, 423, 20, 14);
-
-        jLabel26.setText("Kvinna");
-        jPanel4.add(jLabel26);
-        jLabel26.setBounds(327, 423, 32, 14);
-
-        jRadioButton1.setText("jRadioButton1");
-        jPanel4.add(jRadioButton1);
-        jRadioButton1.setBounds(189, 486, 93, 23);
-
-        jRadioButton2.setText("jRadioButton2");
-        jPanel4.add(jRadioButton2);
-        jRadioButton2.setBounds(300, 486, 93, 23);
+        jTabbedPane1.addTab("Länder", jPanel7);
 
         javax.swing.GroupLayout pAdminLayout = new javax.swing.GroupLayout(pAdmin);
         pAdmin.setLayout(pAdminLayout);
@@ -694,14 +646,14 @@ public class Meny extends javax.swing.JFrame {
             pAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pAdminLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1)
                 .addContainerGap())
         );
         pAdminLayout.setVerticalGroup(
             pAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pAdminLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1)
                 .addContainerGap())
         );
 
@@ -715,9 +667,7 @@ public class Meny extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(tpMeny, javax.swing.GroupLayout.PREFERRED_SIZE, 756, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 74, Short.MAX_VALUE))
+            .addComponent(tpMeny, javax.swing.GroupLayout.PREFERRED_SIZE, 756, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -798,7 +748,7 @@ public class Meny extends javax.swing.JFrame {
     }//GEN-LAST:event_cbKostnadTypItemStateChanged
 
     private void btnSparaSomUtkastMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSparaSomUtkastMouseClicked
-       EntityGrej.Reseutlägg reseutlägg = new EntityGrej.Reseutlägg(0, );
+       EntityGrej.Reseutlägg reseutlägg = new EntityGrej.Reseutlägg();
        reseutlägg.sparaIUtkast();
     }//GEN-LAST:event_btnSparaSomUtkastMouseClicked
 
@@ -847,9 +797,6 @@ public class Meny extends javax.swing.JFrame {
     private javax.swing.JButton jBtbRegReseförskott;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JComboBox jComboBox3;
     private javax.swing.JComboBox jComboBox4;
     private javax.swing.JComboBox jComboBox5;
@@ -865,16 +812,7 @@ public class Meny extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -886,19 +824,14 @@ public class Meny extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
