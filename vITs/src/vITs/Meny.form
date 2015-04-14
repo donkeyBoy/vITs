@@ -451,7 +451,6 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <Component id="btnRemove" alignment="0" min="-2" pref="155" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -483,6 +482,10 @@
                                           <Component id="dpTill" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                  <Component id="btnRemove" min="-2" pref="155" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace pref="337" max="32767" attributes="0"/>
