@@ -59,13 +59,13 @@ public class Reseförskott implements Serializable {
         this.id = id;
     }
 
-    public Reseförskott(int id, String motivering, int summa, boolean accepterat) {
+    public Reseförskott(int id, String motivering, int summa, boolean accepterat, int konsultId) {
         this.id = id;
         this.motivering = motivering;
         this.summa = summa;
         this.accepterat = accepterat;
         this.reseutläggsID = null;
-        this.konsultID = 1;
+        this.konsultID = konsultId;
         
     }
 
