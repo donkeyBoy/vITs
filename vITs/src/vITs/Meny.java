@@ -341,6 +341,11 @@ public class Meny extends javax.swing.JFrame {
         jLabel5.setText("Typ av kostnad:");
 
         cbKostnadTyp.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mat", "Boende", "Annat" }));
+        cbKostnadTyp.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cbKostnadTypItemStateChanged(evt);
+            }
+        });
 
         jLabel6.setText("Kostnad");
 
@@ -826,6 +831,11 @@ public class Meny extends javax.swing.JFrame {
         btnLoggain.setVisible(true);
         btnLoggaUt.setVisible(false);
     }//GEN-LAST:event_btnLoggaUtActionPerformed
+
+    private void cbKostnadTypItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbKostnadTypItemStateChanged
+        JOptionPane.showMessageDialog(null, cbKostnadTyp.getSelectedItem().toString());
+                //cbKostnadTyp.getSelectedItem().toString();
+    }//GEN-LAST:event_cbKostnadTypItemStateChanged
 
     /**
      * @param args the command line arguments
