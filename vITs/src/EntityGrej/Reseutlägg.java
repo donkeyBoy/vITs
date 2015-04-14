@@ -82,6 +82,7 @@ public class Reseutlägg implements Serializable {
             File file = new File("Hejhej.txt");
             PrintWriter out = new PrintWriter(file);
             out.write("dsads");
+            out.close();
         }
         catch(FileNotFoundException hej)
         {
